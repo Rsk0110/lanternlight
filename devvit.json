@@ -1,6 +1,6 @@
 {
   "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
-  "name": "lanternlight",
+  "name": "lanternlight-daily",
   "post": {
     "dir": "dist/client",
     "entrypoints": {
@@ -20,7 +20,10 @@
   },
   "permissions": {
     "redis": true,
-    "reddit": { "enable": true, "scope": "user" }
+    "reddit": {
+      "enable": true,
+      "scope": "user"
+    }
   },
   "menu": {
     "items": [
