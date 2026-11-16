@@ -45,7 +45,7 @@ const mockApi = async (): Promise<Api> => {
   const { dayFromDate } = await import('../shared/puzzle.ts');
   const store = game.memoryStore();
   const params = new URLSearchParams(location.search);
-  const today = Math.max(1, dayFromDate(new Date()));
+  const today = Number(params.get('today') ?? Math.max(1, dayFromDate(new Date())));
   const day = Number(params.get('day') ?? today);
   const user = params.get('user') ?? 'demo_player';
   // seed some community results so the histogram and leaderboard look alive
